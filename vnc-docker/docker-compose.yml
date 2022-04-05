@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mvnc:
+   image: mbank/mvnc
+   container_name: mvnc
+   ports:
+    - 6080:80
+   environment:
+    - RESOLUTION=1600x900
+    - HTTP_PASSWORD=mypassword
+    - PATH=/opt/openjdk-11/bin:$PATH
+   volumes:
+    - /dev/shm:/dev/shm
